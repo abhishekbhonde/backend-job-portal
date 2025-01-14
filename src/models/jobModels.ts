@@ -1,16 +1,13 @@
 import { Sequelize, DataTypes, Model } from 'sequelize';
-import dotenv from 'dotenv';
 
-// Load environment variables
-dotenv.config();
-
-// Initialize Sequelize instance
+// Initialize Sequelize instance with direct credentials
 const sequelize = new Sequelize(
-    process.env.DB_NAME!, // Database name
-    process.env.DB_USER!, // Database username
-    process.env.DB_PASSWORD!, // Database password
+    'sql12757484', // Database name
+    'sql12757484', // Database username
+    'iz1vLCTsrk', // Database password
     {
-        host: process.env.DB_HOST!, // Database host
+        host: 'sql12.freesqldatabase.com', // Database host
+        port: 3306, // Database port
         dialect: 'mysql', // Database dialect
         logging: false, // Disable SQL query logging
     }
